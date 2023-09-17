@@ -1,0 +1,6 @@
+**/*.config.js
+**/.git
+**/.svn
+**/.hg
+**/node_modules
+expo-env.d.ts

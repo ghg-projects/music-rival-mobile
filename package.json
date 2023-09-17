@@ -7,7 +7,9 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll"
+    "test": "jest --watchAll",
+    "test:eslint": "echo \"\\033[33mRunning eslint check\" && eslint .",
+    "test:tsc": "echo \"\\033[33mRunning typescript check\" && tsc"
   },
   "jest": {
     "preset": "jest-expo"
@@ -15,6 +17,11 @@
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
     "@react-navigation/native": "^6.0.2",
+    "eslint": "^8.49.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-universe": "^12.0.0",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
     "expo": "~49.0.11",
     "expo-font": "~11.4.0",
     "expo-linking": "~5.0.2",
@@ -24,6 +31,7 @@
     "expo-system-ui": "~2.4.0",
     "expo-web-browser": "~12.3.2",
     "nativewind": "^2.0.11",
+    "prettier": "^3.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-native": "0.72.4",

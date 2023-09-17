@@ -1,0 +1,12 @@
+{
+  "singleQuote": true,
+
+  "_comment": "config options below are prettier defaults",
+  "bracketSameLine": false,
+  "bracketSpacing": true,
+  "arrowParens": "always",
+  "trailingComma": "all",
+  "useTabs": false,
+  "semi": true,
+  "tabWidth": 2
+}
