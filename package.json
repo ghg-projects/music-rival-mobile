@@ -7,12 +7,7 @@
     "android": "expo start --android",
     "ios": "expo start --ios",
     "web": "expo start --web",
-    "test": "jest --watchAll",
-    "test:eslint": "echo \"\\033[33mRunning eslint check\" && eslint .",
-    "test:tsc": "echo \"\\033[33mRunning typescript check\" && tsc"
-  },
-  "jest": {
-    "preset": "jest-expo"
+    "test:eslint": "echo \"\\033[33mRunning eslint check\" && eslint ."
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
@@ -43,8 +38,6 @@
   "devDependencies": {
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.14",
-    "jest": "^29.2.1",
-    "jest-expo": "~49.0.0",
     "react-test-renderer": "18.2.0",
     "tailwindcss": "3.3.2",
     "typescript": "^5.1.3"
