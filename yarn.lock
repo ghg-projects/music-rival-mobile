@@ -4037,6 +4037,11 @@ expo-font@~11.4.0:
   dependencies:
     fontfaceobserver "^2.1.0"
 
+expo-haptics@~12.4.0:
+  version "12.4.0"
+  resolved "https://registry.yarnpkg.com/expo-haptics/-/expo-haptics-12.4.0.tgz#99ad9d6a8eafb219aee022ec1412a998e1c90d71"
+  integrity sha512-eELhZOO64oJa6AtEUxosatjSENE/tQgF2rVJxDsvRdx8Vgd3uFC+FRoM3nbMVJkxDgAaP3EKOPT1zVM41sNurw==
+
 expo-head@0.0.12:
   version "0.0.12"
   resolved "https://registry.yarnpkg.com/expo-head/-/expo-head-0.0.12.tgz#2e2253a4c95d05e443c160f4e99cc5d11a086049"
@@ -7083,6 +7088,11 @@ react-is@^17.0.1:
   version "17.0.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+
+react-native-custom-haptics@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-custom-haptics/-/react-native-custom-haptics-1.0.1.tgz#a1c33fafeeeddc62498f74e6620304fa6f4e1274"
+  integrity sha512-5eis8fXCuVP9hT0Y1OiC4kKy6/i+esx8HOfj7QIAYDJSh4LTbrQtPdt8rMLnw9zAeMmwPNR7Zlf6pKuzVf2UTQ==
 
 react-native-gesture-handler@~2.12.0:
   version "2.12.1"
