@@ -38,6 +38,7 @@
     "react-native-web": "~0.19.6"
   },
   "devDependencies": {
+    "supabase": "^1.99.5",
     "@babel/core": "^7.20.0",
     "@types/react": "~18.2.14",
     "react-test-renderer": "18.2.0",
