@@ -4,8 +4,8 @@ import { Controller, useForm } from 'react-hook-form';
 import { View, Text, TextInput, Pressable } from 'react-native';
 import * as Yup from 'yup';
 
-import { SUCCESS_HAPTIC, ERROR_HAPTIC } from '../../constants/Haptics';
-import Button from '../../shared/Button';
+import { SUCCESS_HAPTIC, ERROR_HAPTIC } from '@/constants/Haptics';
+import Button from '@/shared/Button';
 
 type FormData = {
   username: string;

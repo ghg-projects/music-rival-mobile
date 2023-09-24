@@ -5,7 +5,20 @@ module.exports = function (api) {
     plugins: [
       // Required for expo-router
       'expo-router/babel',
-      'nativewind/babel'
+      'nativewind/babel',
+      [
+        require.resolve('babel-plugin-module-resolver'),
+        {
+          root: ['./'],
+          alias: {
+            '@/components': './components',
+            '@/constants': './constants',
+            '@/shared': './shared',
+            '@/assets': './assests',
+            '@/app': './app',
+          },
+        },
+      ],
     ],
   };
 };
