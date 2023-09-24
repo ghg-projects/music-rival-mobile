@@ -16,6 +16,7 @@ module.exports = function (api) {
             '@/shared': './shared',
             '@/assets': './assests',
             '@/app': './app',
+            '@/lib': './lib',
           },
         },
       ],

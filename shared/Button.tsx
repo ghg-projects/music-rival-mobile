@@ -17,7 +17,7 @@ const Button = ({ onPress, text, disabled, haptic }: ButtonProps) => {
   return (
     <StyledPressable
       className={
-        'border-2 border-blue-500 items-center justify-center py-3 px-10 rounded bg-blue-500 active:bg-blue-800 ' +
+        'm-1 border-2 border-blue-500 items-center justify-center py-3 px-10 rounded bg-blue-500 active:bg-blue-800 ' +
         (disabled && 'opacity-50')
       }
       onPress={() => {
