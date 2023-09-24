@@ -10,6 +10,8 @@ import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 import { HapticsProvider } from 'react-native-custom-haptics';
 
+import SignOn from './signon';
+
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
@@ -49,15 +51,20 @@ export default function RootLayout() {
 
 function RootLayoutNav() {
   const colorScheme = useColorScheme();
+  const isAuthenticated: boolean = false; // hardcoded logic for dev
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       {/*HapticsProvider is required to provide custom Haptics */}
       <HapticsProvider>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
-        </Stack>
+        {isAuthenticated === false ? (
+          <SignOn />
+        ) : (
+          <Stack>
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+          </Stack>
+        )}
       </HapticsProvider>
     </ThemeProvider>
   );
