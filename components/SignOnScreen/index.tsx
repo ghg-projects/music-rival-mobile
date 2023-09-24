@@ -14,8 +14,11 @@ type FormData = {
 };
 
 const validationSchema = Yup.object().shape({
+  // TODO: look into email validation
   email: Yup.string()
+    .min(3, 'Email must be at least than 3 characters')
     .max(254, 'Email must be less than 254 characters')
+    .email('Must be a valid email')
     .required('Email is required'),
   password: Yup.string()
     .min(6, 'Password must be at least 6 characters')
@@ -41,27 +44,23 @@ const SignOnScreen = () => {
   const isFormError: boolean = Object.keys(errors).length !== 0;
 
   async function signInWithEmail({ email, password }: FormData) {
-    console.log('sign IN with data:', { email, password });
     setLoading(true);
     const { error } = await supabase.auth.signInWithPassword({
       email,
       password,
     });
 
-    console.log('🚀 ~ signInWithEmail ~ error:', error);
     if (error) Alert.alert(error.message);
     setLoading(false);
   }
 
   async function signUpWithEmail({ email, password }: FormData) {
-    console.log('sign UP with data:', { email, password });
     setLoading(true);
     const { error } = await supabase.auth.signUp({
       email,
       password,
     });
 
-    console.log('🚀 ~ signUpWithEmail ~ error:', error);
     if (error) Alert.alert(error.message);
     setLoading(false);
   }
