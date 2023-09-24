@@ -22,7 +22,7 @@ const validationSchema = Yup.object().shape({
     .max(20, 'Password must be less than 20 characters')
     .matches(
       /^(?=.*[A-Z])(?=.*\d).+/,
-      'Password must contain at least one letter, one number, and one special character',
+      'Password must contain at least capital letter, and a number',
     )
     .required('Password is required'),
 });
