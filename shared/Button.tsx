@@ -6,21 +6,31 @@ import { Text, Pressable } from 'react-native';
 type ButtonProps = {
   text: string;
   onPress: () => void;
+  disabled?: boolean;
+  haptic?: () => void;
 };
 
 const StyledPressable = styled(Pressable);
 const StyledText = styled(Text);
 
-const Button = ({ onPress, text }: ButtonProps) => {
+const Button = ({ onPress, text, disabled, haptic }: ButtonProps) => {
   return (
     <StyledPressable
-      className="border-2 border-blue-500 h-12 px-4 items-center justify-center rounded-md active:border-blue-700"
+      className={
+        'border-2 border-blue-500 items-center justify-center py-3 px-10 rounded bg-blue-500 active:bg-blue-800 ' +
+        (disabled && 'opacity-50')
+      }
       onPress={() => {
-        Haptics.selectionAsync();
+        if (haptic) {
+          haptic();
+        } else {
+          Haptics.selectionAsync();
+        }
         onPress();
       }}
+      disabled={disabled}
     >
-      <StyledText className="font-bold text-blue-500">{text}</StyledText>
+      <StyledText className="font-bold text-white">{text}</StyledText>
     </StyledPressable>
   );
 };
