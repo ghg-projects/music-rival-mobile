@@ -5,5 +5,10 @@
 ## Resources used
 
 
+
+## Takeaways
+
+
+
 ## Issue
 Resolves 
