@@ -8,8 +8,16 @@
       "@/constants/*": ["./constants/*"],
       "@/shared/*": ["./shared/*"],
       "@/assests/*": ["./assests/*"],
-      "@/app/*": ["./app/*"]
+      "@/app/*": ["./app/*"],
+      "@/lib/*": ["./lib/*"]
     }
   },
-  "include": ["**/*.ts", "**/*.tsx", ".expo/types/**/*.ts", "expo-env.d.ts"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts",
+    "env.d.tsx"
+  ],
+  "exclude": ["node_modules"]
 }

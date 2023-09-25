@@ -1,10 +1,12 @@
 import { useEffect } from 'react';
-import { Button as NativeButton } from 'react-native';
+import { Alert, Button as NativeButton } from 'react-native';
 import { useHaptics } from 'react-native-custom-haptics';
 
 import { Text, View } from '../../components/Themed';
 import { TEST_HAPTIC } from '../../constants/Haptics';
 import Button from '../../shared/Button';
+
+import { supabase } from '@/lib/supabase';
 
 export default function TabOneScreen() {
   const { trigger, stop } = useHaptics();
@@ -13,7 +15,10 @@ export default function TabOneScreen() {
     return () => stop();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
-
+  async function signout() {
+    const { error } = await supabase.auth.signOut();
+    if (error) Alert.alert(error.message);
+  }
   return (
     <View className="flex-1 items-center justify-center">
       <Text className="font-bold text-xl">Tab One</Text>
@@ -22,6 +27,8 @@ export default function TabOneScreen() {
         lightColor="#eee"
         darkColor="rgba(255,255,255,0.1)"
       />
+      <Button text="Sign Out" onPress={signout} />
+
       <Button text="shared button" onPress={() => null} />
       <NativeButton
         title="custom haptic"
